@@ -1,0 +1,24 @@
+/* background:"black",height:"100vh" */
+.content-menu {
+    background:#cf2121;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: -300px;
+    z-index: -1;
+}
+
+.content-menu-right {
+    animation: right-animation 1s;
+    animation-fill-mode: forwards; /* 当动画完成时保持最后一个属性值 */
+}
+
+@keyframes right-animation {
+    0% { left: -300px; }
+    80% { left: 20px; }
+    85% { left: -10px; }
+    90% { left: 6px; }
+    95% { left: -3px; }
+    100% { left: 0px; }
+}
