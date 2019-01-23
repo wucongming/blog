@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import EassyItem from '../eassyitem/index'
 import './index.css'
+
+let animationClassName = "";
+let fadeClassName = "";
 
 class ContentMenu extends Component {
 
+
+
     render() {
+    
         console.log("哈哈")
-        const { menuStatus } = this.props;
+        const { newMenuStatus, oldMenuStatus } = this.props;
+        console.log(animationClassName)
         
+        if(oldMenuStatus == 0 && newMenuStatus != 0) {
+            animationClassName = "content-menu-right";
+            fadeClassName = "white-fade-out";
+        } else if(newMenuStatus == 0 && oldMenuStatus ) {
+                animationClassName = "content-menu-left";
+                fadeClassName = "white-fade-in";
+        }
         return (
-            <div className="content-menu content-menu-right">
-                hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+            <div className={animationClassName + " content-menu-container"}>
+                
+                <div className="menu-sub">
+                    <div></div>
+                    <div></div>
+                </div>
+                <div className={"menu-content " + fadeClassName}>
+                    <EassyItem></EassyItem>
+                </div>
             </div>
         );
     }
@@ -26,7 +48,8 @@ class ContentMenu extends Component {
 }
 
 const mapState = (state) => ({
-    menuStatus: state.getIn(['sub','menuStatus'])
+    newMenuStatus: state.getIn(['sub','newMenuStatus']),
+    oldMenuStatus: state.getIn(['sub','oldMenuStatus']),
 });
 
 const mapDispatch = (dispatch) => ({

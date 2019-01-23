@@ -69,7 +69,7 @@ class Sub extends Component {
 }
 
 const mapState = (state) => ({
-    menuStatus: state.getIn(['sub','menuStatus'])
+    menuStatus: state.getIn(['sub','newMenuStatus'])
 });
 
 const mapDispatch = (dispatch) => ({

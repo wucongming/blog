@@ -7,7 +7,7 @@ class PopMenu extends Component {
 
     render() {
         return (
-            <div className="pop-menu" style={{background:"black",height:"100vh"}}>
+            <div className="pop-menu">
 
             </div>
         );

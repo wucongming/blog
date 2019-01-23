@@ -11,7 +11,7 @@ const changeHomeData = (result) => ({
 
 export const changeMenuStatus = (result) => ({
     type: constants.TRIGGLE_MENU_ANIMATION,
-    menuStatus: result
+    newMenuStatus: result
 });
 
 export const getHomeInfo = () => {

@@ -1,12 +1,15 @@
 /* background:"black",height:"100vh" */
-.content-menu {
-    background:#cf2121;
+.content-menu-container {
+    background: rgba(0,0,0,0);
     width: 100vw;
     height: 100vh;
     position: absolute;
     top:0;
     left: -300px;
     z-index: -1;
+    display: flex;
+    flex-flow: row;
+
 }
 
 .content-menu-right {
@@ -21,4 +24,59 @@
     90% { left: 6px; }
     95% { left: -3px; }
     100% { left: 0px; }
+}
+
+.white-fade-out {
+    animation: fade-out-animation 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out-animation 
+{
+    0% { background: rgba(255,255,255,1); }
+    80% { background: rgba(255,255,255,0); }
+    100% { background: rgba(255,255,255,0); }
+}
+
+.content-menu-left {
+    animation: left-animation 1s;
+    animation-fill-mode: forwards; /* 当动画完成时保持最后一个属性值 */
+}
+
+@keyframes left-animation {
+    0% { left: 0px; }
+    80% { left: -320px; }
+    85% { left: -290px; }
+    90% { left: -306px; }
+    95% { left: -297px; }
+    100% { left: -300px; }
+}
+
+
+.white-fade-in {
+    animation: fade-in-animation 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-animation 
+{
+    0% { background: rgba(255,255,255,0); }
+    80% { background: rgba(255,255,255,1); }
+    100% { background: rgba(255,255,255,1); }
+}
+
+
+.menu-sub {
+    width: 300px;
+    min-width: 300px;
+    height: 100vh;
+    background: rgba(0,0,0,0);
+}
+
+.menu-content {
+    background: rgb(234,234,234);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }

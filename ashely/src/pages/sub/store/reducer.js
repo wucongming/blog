@@ -8,7 +8,8 @@ const defaultState = fromJS({
      * 1 :主界面侧栏显示 “标签”栏
      * 2 :主界面侧栏显示 “关于我”栏
      */
-     menuStatus: 0 
+     newMenuStatus: 0,
+     oldMenuStatus: 0
 });
 
 const changeHomeData = (state, action) => {
@@ -27,6 +28,13 @@ const addArticleList = (state,action) => {
 });
 };
 
+const changeMenuStatus = (state,action) => {
+    return state.merge({
+        "oldMenuStatus": state.get("newMenuStatus"),
+        "newMenuStatus": action.newMenuStatus
+    });
+}
+
 export default (state = defaultState, action) => {
      switch(action.type) {
          case constants.CHANGE_HOME_DATA:
@@ -36,7 +44,7 @@ export default (state = defaultState, action) => {
          case constants.TOGGLE_SCROLL_TOP:
              return state.set('showScroll',action.show);
          case constants.TRIGGLE_MENU_ANIMATION:
-            return state.set('menuStatus',action.menuStatus)
+            return changeMenuStatus(state,action);
          default:
              return state;
      }
