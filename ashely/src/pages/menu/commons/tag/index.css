@@ -1,0 +1,42 @@
+.eassy-tag {
+    width: fit-content;
+    height: 16px;
+    font-size: 10px;
+    /* color: white; */
+    background: wheat;
+    padding: 0px 5px;
+    /* border: 5px 0px 0px 5px solid transparent; */
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    position: relative;
+    border-radius: 0 4px 4px 0;
+    margin-left: 20px;
+    float: left;
+}
+
+.tag-circle {
+
+    /* margin-right: 125px; */
+    position: absolute;
+    left: 0px;
+    background: white;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #82644B;
+    border-radius: 10px;
+}
+
+.tag-content {
+    margin-left: 5px;
+}
+
+.tag-trangle {
+position: absolute;
+left: -16px;
+border-width: 8px;
+
+border-style: solid;
+
+
+}

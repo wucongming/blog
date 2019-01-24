@@ -32,6 +32,10 @@ class ContentMenu extends Component {
                 </div>
                 <div className={"menu-content " + fadeClassName}>
                     <EassyItem></EassyItem>
+                    <EassyItem></EassyItem>
+                    <EassyItem></EassyItem>
+                    <EassyItem></EassyItem>
+                    
                 </div>
             </div>
         );

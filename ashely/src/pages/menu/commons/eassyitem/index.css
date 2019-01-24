@@ -1,8 +1,15 @@
-.eassy-item {
-    margin: 2rem 2rem 0rem 2rem;
-    background: white;
+.item-container {
     width: 100%;
+}
+
+.eassy-item {
+    /* margin: 2rem 2rem 0rem 2rem; */
+    background: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-top:20px;
     height: fit-content;
+    /* float: left; */
 }
 
 .item-top {
@@ -19,6 +26,10 @@
     
 }
 
+.item-content {
+    border-bottom: 1px solid rgb(234,234,234);
+}
+
 .item-title {
    /* padding: 0 20px; */
    font-size: 1.3rem;
@@ -31,4 +42,33 @@
 .item-date {
     display: flex;
     align-items: center;
+}
+
+.item-detail-link a {
+    color: rgb(0, 136, 204);
+}
+
+.item-feet {
+    
+    padding: 0px 30px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    align-items: center;
+}
+
+.item-tags {
+    width: fit-content;
+}
+
+.eassy-more {
+    font-size: 14px;
+    padding: 5px 10px;
+    background: rgb(77, 77, 77);
+    border-radius: 5px;
+    color: white;
+} 
+.eassy-more:hover {
+    background: rgb(60,60,60);
+    cursor: pointer;
 }
