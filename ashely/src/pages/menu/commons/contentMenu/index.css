@@ -2,7 +2,7 @@
 .content-menu-container {
     background: rgba(0,0,0,0);
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
     position: absolute;
     top:0;
     left: -300px;
@@ -32,9 +32,9 @@
 
 @keyframes fade-out-animation 
 {
-    0% { background: rgba(255,255,255,1); }
-    80% { background: rgba(255,255,255,0); }
-    100% { background: rgba(255,255,255,0); }
+    0% { background: rgba(234,234,234,1); }
+    80% { background: rgba(234,234,234,0); }
+    100% { background: rgba(234,234,234,0); }
 }
 
 .content-menu-left {
@@ -59,9 +59,9 @@
 
 @keyframes fade-in-animation 
 {
-    0% { background: rgba(255,255,255,0); }
-    80% { background: rgba(255,255,255,1); }
-    100% { background: rgba(255,255,255,1); }
+    0% { background: rgba(234,234,234,0); }
+    80% { background: rgba(234,234,234,1); }
+    100% { background: rgba(234,234,234,1); }
 }
 
 
@@ -75,9 +75,8 @@
 .menu-content {
     background: rgb(234,234,234);
     width: 100vw;
-    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     float: left;
+    overflow-y:scroll;
 }

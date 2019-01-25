@@ -31,10 +31,10 @@ class ContentMenu extends Component {
                     <div></div>
                 </div>
                 <div className={"menu-content " + fadeClassName}>
-                    <EassyItem></EassyItem>
-                    <EassyItem></EassyItem>
-                    <EassyItem></EassyItem>
-                    <EassyItem></EassyItem>
+                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)" className="hh"></EassyItem>
+                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
+                    <EassyItem connect="学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
+                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
                     
                 </div>
             </div>

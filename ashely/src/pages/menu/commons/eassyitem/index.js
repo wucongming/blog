@@ -22,7 +22,7 @@ class  EassyItem extends Component {
                 <div className="item-body">
                     <div className="item-content">
                         <div>
-                        学了一点点React皮毛的我决定尝试下一下React Native :)
+                        {this.props.content}
                         </div>
                         <div className="hover-pointer item-detail-link">
                             <Link to="/">more >></Link>
