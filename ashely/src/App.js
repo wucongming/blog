@@ -16,7 +16,7 @@ class App extends Component {
             <Sub>
             
             </Sub>
-            <Route path="/" component={Menu} ></Route>
+            <Menu></Menu>
           </div>
         </BrowserRouter>
      </Provider>

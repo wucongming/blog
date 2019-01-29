@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import EassyItem from '../eassyitem/index'
+import { BrowserRouter, Route } from 'react-router-dom';
+import EassyList from '../eassylist/index'
+import EassyContent from '../eassycontent/index'
 import './index.css'
 
 let animationClassName = "";
@@ -24,20 +26,18 @@ class ContentMenu extends Component {
                 fadeClassName = "white-fade-in";
         }
         return (
-            <div className={animationClassName + " content-menu-container"}>
+            <BrowserRouter>
+                <div className={animationClassName + " content-menu-container"}>
                 
-                <div className="menu-sub">
-                    <div></div>
-                    <div></div>
+                    <div className="menu-sub">
+                        <div></div>
+                        <div></div>
+                    </div>
+                        <Route exact path="/" render={(props) => <EassyList fadeClassName={fadeClassName}></EassyList>}></Route>
+                        <Route exact path="/eassy/:id" render={(props) => <EassyContent fadeClassName={fadeClassName}></EassyContent>} ></Route>
+
                 </div>
-                <div className={"menu-content " + fadeClassName}>
-                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)" className="hh"></EassyItem>
-                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
-                    <EassyItem connect="学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
-                    <EassyItem content="学了一点点React皮毛的我决定尝试下一下React Native :)"></EassyItem>
-                    
-                </div>
-            </div>
+            </BrowserRouter>
         );
     }
 

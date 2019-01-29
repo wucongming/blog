@@ -40,7 +40,7 @@ class  EassyItem extends Component {
                         </div>
                     </div>
                     <div className="eassy-more">
-                       展开全文 >>
+                       <Link to="/eassy/1">展开全文 >></Link>
                     </div>
                 </div>
             </div>
